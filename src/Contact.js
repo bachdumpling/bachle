@@ -1,9 +1,15 @@
 import { ArrowUpIcon } from "@heroicons/react/24/outline";
+import { motion as m } from "framer-motion";
 import React from "react";
 
 function Contact() {
   return (
-    <div>
+    <m.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.75 }}
+      exit={{ opacity: 0 }}
+    >
       <div className="max-w-4xl mx-5 lg:mx-auto pt-10">
         <h1 className="text-5xl font-extrabold">Contact.</h1>
 
@@ -13,7 +19,6 @@ function Contact() {
             <span className="font-semibold"> ble6@fordham.edu </span>
           </span>
         </div>
-
         <div className="">
           <form className="grid grid-flow-row space-y-5 py-2 w-full md:w-1/2">
             <input
@@ -34,7 +39,7 @@ function Contact() {
               required
             ></textarea>
             <button className="w-1/2 bg-black h-14 text-white rounded-md font-extralight text-sm">
-                Send Message
+              Send Message
             </button>
           </form>
         </div>
@@ -46,7 +51,7 @@ function Contact() {
           </div>
         </div>
       </div>
-    </div>
+    </m.div>
   );
 }
 

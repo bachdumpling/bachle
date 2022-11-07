@@ -1,10 +1,16 @@
 import { ArrowUpIcon } from "@heroicons/react/24/outline";
+import { motion as m } from "framer-motion";
 import React from "react";
 import { useParams } from "react-router-dom";
 
 function About() {
   return (
-    <div>
+    <m.div
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ duration: 0.75 }}
+    exit={{opacity: 0}}
+    >
       <div className="max-w-4xl mx-5 lg:mx-auto pt-10">
         <h1 className="text-5xl font-extrabold pb-12">About Me.</h1>
 
@@ -132,7 +138,7 @@ function About() {
           </div>
         </div>
       </div>
-    </div>
+    </m.div>
   );
 }
 

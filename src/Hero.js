@@ -1,11 +1,17 @@
 import React from "react";
 import avatar from "./Assets/avatar1.png";
 import { ArrowUpIcon } from "@heroicons/react/24/outline";
+import { animate, motion as m } from "framer-motion";
 
 function Hero() {
   return (
-    <div>
-      <div className="max-w-4xl mx-5 lg:mx-auto border- pt-10">
+    <m.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.75 }}
+      exit={{opacity: 0}}
+    >
+      <div className="max-w-4xl mx-5 lg:mx-auto z-0 pt-10">
         <div className="flex">
           <div className="bg-gray-900/5 relative w-28 h-28 grid place-items-center rounded-full drop-shadow-sm">
             <img className="w-28 h-28" src={avatar} />
@@ -24,17 +30,17 @@ function Hero() {
         </div>
 
         <div className="pt-10 flex space-x-3 cursor-pointer">
-          <p className="text-gray-500 text-md hover:underline">See more about me</p>
+          <p className="text-gray-500 text-md hover:underline">
+            See more about me
+          </p>
           <div className="rotate-90 ">
             <ArrowUpIcon className="w-5 rotate-90 animate-bounce" />
           </div>
         </div>
 
-        <div>
-          {/* <FontAwesomeIcon icon="fa-brands fa-linkedin" /> */}
-        </div>
+        <div>{/* <FontAwesomeIcon icon="fa-brands fa-linkedin" /> */}</div>
       </div>
-    </div>
+    </m.div>
   );
 }
 

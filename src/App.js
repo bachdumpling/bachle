@@ -10,7 +10,7 @@ import Contact from "./Contact";
 import About from "./About";
 import Project from "./Project";
 
-function App() {
+function App({router}) {
   // const [users, setUsers] = useState([]);
   // const usersCollectionRef = collection(db, "users");
   // useEffect(() => {
