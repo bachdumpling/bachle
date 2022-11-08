@@ -19,11 +19,11 @@ function Nav() {
   console.log();
 
   return (
-    <div className="flex justify-between py-10 md:py-16 max-w-5xl mx-5 lg:mx-auto">
+    <div className="flex justify-between py-10 mt-5 md:py-16 max-w-3xl md:max-w-5xl mx-5 lg:mx-auto">
       {/* Left */}
       <Link to="/">
         <div>
-          <p className="text-xl font-bold uppercase text-gray-500 tracking-wide cursor-pointer">
+          <p className="absolute text-xl font-bold uppercase text-gray-500 tracking-wide cursor-pointer">
             Bach Le.
           </p>
         </div>
