@@ -129,7 +129,7 @@ function About() {
           </div>
         </div>
 
-        <div className="pt-12 flex space-x-3 cursor-pointer">
+        <div className="pt-12 flex space-x-3 cursor-pointer mb-40">
           <p className="text-black text-md hover:underline">
             More detailed information
           </p>

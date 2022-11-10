@@ -129,7 +129,7 @@ function Nav() {
       {openNav ? (
         <m.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 0.2, ease: "easeIn"}}>
           <div
-            className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+            className="mt-5 justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
             // style={{transition: 'opacity 0.25s ease'}}
           >
             <div className="relative w-screen h-screen pt-10 px-5 bg-white">
