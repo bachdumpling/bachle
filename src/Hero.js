@@ -4,26 +4,25 @@ import { ArrowUpIcon } from "@heroicons/react/24/outline";
 import { animate, motion as m } from "framer-motion";
 import { Link } from "react-router-dom";
 import { shuffle } from "lodash";
+import { Echo } from "echo3d";
+import MainIntro from "./MainIntro";
+import Footer from "./Footer";
 
 function Hero() {
-  const [color, setColor] = useState("bg-indigo-800")
+  const [color, setColor] = useState("bg-indigo-800");
 
   function copyText() {
     /* Copy text into clipboard */
     navigator.clipboard.writeText("lehoangbach7802@gmail.com");
   }
 
-  const colors = [
-    "indigo",
-    "blue",
-    "green"
-  ];
+  // const colors = ["indigo", "blue", "green"];
 
-  useEffect(() => {
-    setColor(shuffle(colors).pop());
-  }, []);
+  // useEffect(() => {
+  //   setColor(shuffle(colors).pop());
+  // }, []);
 
-  console.log(`hover:bg-${color}`)
+  // console.log(`hover:bg-${color}`);
 
   return (
     <m.div
@@ -43,38 +42,29 @@ function Hero() {
         </div>
 
         <div className="space-y-5 md:space-y-2">
-          <p className="py-5 font-medium text-5xl">Hi, I'm Bach!</p>
-          <p className="text-gray-500 text-md leading-10">
-            Full-stack web developer based in New York City, business mindset,
-            enthusiast, and a minimalist.
-          </p>
-          <p className="text-gray-500 text-md leading-10">
-            I'm currently probably exploring new hobbies, activities, and
-            knowledge; but I'm always looking to collaborate with creatives and
+          <div className="pt-14 pb-5" >
+            <MainIntro />
+          </div>
+          <p className="text-gray-500 text-md md:text-lg py-5">
+            I'm a developer 📱, digital creator 📷, & curious optimist 🦦. Right
+            now, I'm probably exploring new hobbies, activities, and general
+            knowledge; but I'm always ready to collaborate with creatives and
             businesses.
           </p>
-          <p className="text-gray-500 text-md leading-10">
+          <p className="text-gray-500 text-md md:text-lg">
             View my
             <Link to="/about">
-              <span className={`hover:bg-${color}-800 heroBtn`}>About</span>,
+              <span className={`heroBtn`}>About</span>,
             </Link>{" "}
             <Link to="/resume">
-              <span className={`hover:bg-${color} heroBtn`}>Resume</span>,
+              <span className={`heroBtn`}>Resume</span>,
             </Link>{" "}
             <Link to="/project">
-              <span className={`hover:${color} heroBtn`}>Projects</span>,
+              <span className={`heroBtn`}>Projects</span>, or
             </Link>{" "}
             <Link to="/contact">
-              <span className={`hover:${color} heroBtn`}>Contact</span>
+              <span className={`heroBtn`}>Contact</span> me.
             </Link>
-            , or send me an email at
-            <span
-              title="Click to copy to clipboard"
-              onClick={() => copyText()}
-              className="heroBtn"
-            >
-              lehoangbach7802@gmail.com
-            </span>
           </p>
         </div>
 
@@ -89,7 +79,9 @@ function Hero() {
           </div>
         </Link>
 
-        <div>{/* <FontAwesomeIcon icon="fa-brands fa-linkedin" /> */}</div>
+        <div className="md:max-w-4xl md:mx-5 lg:mx-auto z-0 pt-14 pb-20">
+          <Footer />
+        </div>
       </div>
     </m.div>
   );

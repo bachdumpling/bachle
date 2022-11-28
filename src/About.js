@@ -2,6 +2,7 @@ import { ArrowUpIcon } from "@heroicons/react/24/outline";
 import { motion as m } from "framer-motion";
 import React from "react";
 import { useParams } from "react-router-dom";
+import Footer from "./Footer";
 
 function About() {
   return (
@@ -129,13 +130,17 @@ function About() {
           </div>
         </div>
 
-        <div className="pt-12 flex space-x-3 cursor-pointer mb-40">
+        <div className="pt-12 flex space-x-3 cursor-pointer">
           <p className="text-black text-md hover:underline">
             More detailed information
           </p>
           <div className="rotate-90 ">
             <ArrowUpIcon className="w-5 rotate-90 animate-bounce" />
           </div>
+        </div>
+
+        <div className="md:max-w-4xl md:mx-5 lg:mx-auto z-0 pt-14 pb-20">
+            <Footer />
         </div>
       </div>
     </m.div>

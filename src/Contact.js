@@ -1,8 +1,9 @@
 import { ArrowUpIcon } from "@heroicons/react/24/outline";
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 import { motion as m } from "framer-motion";
 import React, { useRef } from "react";
 import { Link } from "react-router-dom";
+import Footer from "./Footer";
 
 function Contact() {
   const form = useRef();
@@ -10,14 +11,22 @@ function Contact() {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_3tnemf9', 'template_sxituza', form.current, 'hJyfDNCcmW7lTYk0d')
-      .then((result) => {
+    emailjs
+      .sendForm(
+        "service_3tnemf9",
+        "template_sxituza",
+        form.current,
+        "hJyfDNCcmW7lTYk0d"
+      )
+      .then(
+        (result) => {
           console.log(result.text);
-      }, (error) => {
+        },
+        (error) => {
           console.log(error.text);
-      });
+        }
+      );
   };
-
 
   return (
     <m.div
@@ -32,14 +41,18 @@ function Contact() {
         <div className="pt-5 pb-12 text-gray-500">
           <span>
             Get in touch or send me an email directly on
-            <span className="text-black font-semibold"> lehoangbach7802@gmail.com </span>
+            <span className="text-black font-semibold">
+              {" "}
+              lehoangbach7802@gmail.com{" "}
+            </span>
           </span>
         </div>
         <div className="">
-          <form 
-          ref={form}
-          onSubmit={(e) => sendEmail(e)}
-          className="grid grid-flow-row space-y-5 py-2 w-full md:w-1/2">
+          <form
+            ref={form}
+            onSubmit={(e) => sendEmail(e)}
+            className="grid grid-flow-row space-y-5 py-2 w-full md:w-1/2"
+          >
             <input
               className="rounded-md border-[1px] w-full h-14 indent-5"
               placeholder="Name"
@@ -60,9 +73,11 @@ function Contact() {
               name="message"
               required
             ></textarea>
-            <button className="w-1/2 bg-black h-14 text-white rounded-md font-extralight text-sm"
-            type="submit"
-            value="Send">
+            <button
+              className="w-1/2 bg-black h-14 text-white rounded-md font-extralight text-sm"
+              type="submit"
+              value="Send"
+            >
               Send Message
             </button>
           </form>
@@ -77,6 +92,9 @@ function Contact() {
           </div>
         </Link>
 
+        <div className="md:max-w-4xl md:mx-5 lg:mx-auto z-0 pt-14 pb-20">
+          <Footer />
+        </div>
       </div>
     </m.div>
   );
