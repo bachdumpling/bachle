@@ -5,12 +5,11 @@ const greetings = [
   "Hey there",
   "Hello",
   "Hola",
-  "What's up",
   "Xin Chao",
   "你好",
   "Bonjour",
   "Ciao",
-  "Yo",
+  "안녕",
 ];
 
 var __spreadArray =

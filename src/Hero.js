@@ -9,20 +9,11 @@ import MainIntro from "./MainIntro";
 import Footer from "./Footer";
 
 function Hero() {
-  const [color, setColor] = useState("bg-indigo-800");
 
   function copyText() {
     /* Copy text into clipboard */
     navigator.clipboard.writeText("lehoangbach7802@gmail.com");
   }
-
-  // const colors = ["indigo", "blue", "green"];
-
-  // useEffect(() => {
-  //   setColor(shuffle(colors).pop());
-  // }, []);
-
-  // console.log(`hover:bg-${color}`);
 
   return (
     <m.div
@@ -42,7 +33,7 @@ function Hero() {
         </div>
 
         <div className="space-y-5 md:space-y-2">
-          <div className="pt-14 pb-5" >
+          <div className="md:pt-14 md:pb-5 pt-10" >
             <MainIntro />
           </div>
           <p className="text-gray-500 text-md md:text-lg py-5">
@@ -51,7 +42,7 @@ function Hero() {
             knowledge; but I'm always ready to collaborate with creatives and
             businesses.
           </p>
-          <p className="text-gray-500 text-md md:text-lg">
+          <p className="text-gray-500 text-md md:text-lg leading-10 md:leading-normal">
             View my
             <Link to="/about">
               <span className={`heroBtn`}>About</span>,

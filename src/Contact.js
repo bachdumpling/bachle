@@ -26,6 +26,7 @@ function Contact() {
           console.log(error.text);
         }
       );
+    alert('Message sent 😁');
   };
 
   return (

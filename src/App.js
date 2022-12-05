@@ -10,17 +10,34 @@ import Contact from "./Contact";
 import About from "./About";
 import Project from "./Project";
 
-function App({router}) {
-  // const [users, setUsers] = useState([]);
-  // const usersCollectionRef = collection(db, "users");
-  // useEffect(() => {
-  //   const getUsers = async () => {
-  //     const data = await getDocs(usersCollectionRef);
-  //     setUsers(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-  //   };
-  //   getUsers();
-  // }, []);
-  // console.log(users)
+function App({ router }) {
+  const [users, setUsers] = useState([]);
+  const [projects, setProjects] = useState([]);
+
+  const usersCollectionRef = collection(db, "users");
+  useEffect(() => {
+    const getUsers = async () => {
+      const data = await getDocs(usersCollectionRef);
+      setUsers(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+    };
+    getUsers();
+  }, []);
+
+  const projectCollectionRef = collection(db, "project");
+  useEffect(() => {
+    const getProjects = async () => {
+      const data = await getDocs(projectCollectionRef);
+      // console.log(data)
+      setProjects(
+        data.docs.map((doc) => ({
+          ...doc.data(),
+          id: doc.id,
+        }))
+      );
+    };
+    getProjects();
+  }, []);
+  console.log(projects);
 
   return (
     <div className="font-inter bg-[F2F2F2]">
@@ -29,7 +46,7 @@ function App({router}) {
         <Route path="/" element={<Hero />} />
         <Route path="/about" element={<About />} />
         <Route path="/resume" element={<Resume />} />
-        <Route path="/project" element={<Project />} />
+        <Route path="/project" element={<Project projects={projects} />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </div>
