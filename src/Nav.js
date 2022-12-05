@@ -16,8 +16,6 @@ function Nav() {
   const [openNav, setOpenNav] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
 
-  console.log();
-
   return (
     <div className="flex justify-between py-10 mt-5 md:py-16 max-w-3xl md:max-w-5xl mx-5 lg:mx-auto">
       {/* Left */}
@@ -33,7 +31,7 @@ function Nav() {
       {/* <div className="hidden md:visible"> */}
       <div className="grid-flow-col grid-rows-1 grid-cols-5 w-96 justify-items-center text-gray-500 text-lg invisible md:visible inline-grid gap-x-10">
         <div className="col-span-1">
-          {params == "/about" ? (
+          {params === "/about" ? (
             <>
               <Link to="/about">
                 <p className="navBtn font-semibold text-black">About</p>
@@ -47,7 +45,7 @@ function Nav() {
         </div>
 
         <div className="col-span-1">
-          {params == "/resume" ? (
+          {params === "/resume" ? (
             <Link to="/resume">
               <p className="navBtn font-semibold text-black">Resume</p>
             </Link>
@@ -59,7 +57,7 @@ function Nav() {
         </div>
 
         <div className="col-span-1">
-          {params == "/project" ? (
+          {params === "/project" ? (
             <Link to="/project">
               <p className="navBtn font-semibold text-black">Project</p>
             </Link>
@@ -71,7 +69,7 @@ function Nav() {
         </div>
 
         <div className="col-span-1">
-          {params == "/contact" ? (
+          {params === "/contact" ? (
             <Link to="/contact">
               <p className="navBtn font-semibold text-black">Contact</p>
             </Link>
@@ -165,7 +163,7 @@ function Nav() {
                       HOME
                     </p>
                   </Link>
-                  {params == "/" ? (
+                  {params === "/" ? (
                     <div className="w-full flex justify-center">
                       <div className="mt-1 w-16 h-[1px] bg-gray-800 rounded-md "></div>
                     </div>
@@ -182,7 +180,7 @@ function Nav() {
                       ABOUT
                     </p>
                   </Link>
-                  {params == "/about" ? (
+                  {params === "/about" ? (
                     <div className="w-full flex justify-center">
                       <div className="mt-1 w-16 h-[1px] bg-gray-800 rounded-md "></div>
                     </div>
@@ -199,7 +197,7 @@ function Nav() {
                       RESUME
                     </p>
                   </Link>
-                  {params == "/resume" ? (
+                  {params === "/resume" ? (
                     <div className="w-full flex justify-center">
                       <div className="mt-1 w-20 h-[1px] bg-gray-800 rounded-md "></div>
                     </div>
@@ -216,7 +214,7 @@ function Nav() {
                       PROJECT
                     </p>
                   </Link>
-                  {params == "/project" ? (
+                  {params === "/project" ? (
                     <div className="w-full flex justify-center">
                       <div className="mt-1 w-24 h-[1px] bg-gray-800 rounded-md "></div>
                     </div>
@@ -233,7 +231,7 @@ function Nav() {
                       CONTACT
                     </p>
                   </Link>
-                  {params == "/contact" ? (
+                  {params === "/contact" ? (
                     <div className="w-full flex justify-center">
                       <div className="mt-1 w-24 h-[1px] bg-gray-800 rounded-md "></div>
                     </div>
