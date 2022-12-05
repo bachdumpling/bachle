@@ -3,11 +3,11 @@ import Technology from "./Technology";
 
 function ProjectCard({project}) {
   return (
-    <div className="col-span-1 row-span-1 flex cursor-pointer">
+    <div className="col-span-1 row-span-1 flex cursor-pointer shadow-xl">
       <div className="relative overflow-hidden bg-no-repeat bg-cover w-full h-full">
-        <img className="w-full h-full rounded-md" src={project?.image} />
+        <img className="w-full h-full rounded-lg" src={project?.image} />
         <div className="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"></div>
-        <div className="absolute flex flex-col top-0 right-0 bottom-0 left-0 justify-center items-center w-full h-full hover:opacity-100 opacity-0 z-50 transition duration-300 ease-in-out text-sm md:text-lg text-white bg-gray-700 bg-opacity-60 space-y-2">
+        <div className="absolute flex flex-col top-0 right-0 bottom-0 left-0 justify-center items-center w-full h-full hover:opacity-100 opacity-0 z-50 transition duration-300 ease-in-out text-sm md:text-lg text-white bg-gray-700 bg-opacity-60 space-y-2 rounded-lg">
           {/* <div className=""> */}
 
           <p className="font-bold text-lg md:text-xl">{project?.name}</p>
