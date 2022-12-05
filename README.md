@@ -4,6 +4,7 @@
 ### You will need to install these to get started:
 - npm
 - react
+- tailwind css
 
 ### Available Scripts:
 In the project directory, you can run:
