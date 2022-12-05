@@ -5,6 +5,7 @@
 - npm
 - react
 - tailwind css
+- google cloud firebase (will run automatically)
 
 ### Available Scripts:
 In the project directory, you can run:
