@@ -45,9 +45,8 @@ function Resume() {
             </Document>
           </div>
         </div>
-        <div className="md:max-w-4xl md:mx-5 lg:mx-auto z-0 pt-14 pb-20">
-          <Footer />
-        </div>
+
+        <Footer />
       </div>
     </m.div>
   );

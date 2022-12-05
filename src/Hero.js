@@ -9,7 +9,6 @@ import MainIntro from "./MainIntro";
 import Footer from "./Footer";
 
 function Hero() {
-
   function copyText() {
     /* Copy text into clipboard */
     navigator.clipboard.writeText("lehoangbach7802@gmail.com");
@@ -33,7 +32,7 @@ function Hero() {
         </div>
 
         <div className="space-y-5 md:space-y-2">
-          <div className="md:pt-14 md:pb-5 pt-10" >
+          <div className="md:pt-14 md:pb-5 pt-10">
             <MainIntro />
           </div>
           <p className="text-gray-500 text-md md:text-lg py-5">
@@ -70,9 +69,7 @@ function Hero() {
           </div>
         </Link>
 
-        <div className="md:max-w-4xl md:mx-5 lg:mx-auto z-0 pt-14 pb-20">
-          <Footer />
-        </div>
+        <Footer />
       </div>
     </m.div>
   );

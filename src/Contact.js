@@ -26,7 +26,7 @@ function Contact() {
           console.log(error.text);
         }
       );
-    alert('Message sent 😁');
+    alert("Message sent 😁");
   };
 
   return (
@@ -93,9 +93,7 @@ function Contact() {
           </div>
         </Link>
 
-        <div className="md:max-w-4xl md:mx-5 lg:mx-auto z-0 pt-14 pb-20">
-          <Footer />
-        </div>
+        <Footer />
       </div>
     </m.div>
   );

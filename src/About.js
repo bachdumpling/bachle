@@ -1,16 +1,16 @@
 import { ArrowUpIcon } from "@heroicons/react/24/outline";
 import { motion as m } from "framer-motion";
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Footer from "./Footer";
 
 function About() {
   return (
     <m.div
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    transition={{ duration: 0.75 }}
-    exit={{opacity: 0}}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.75 }}
+      exit={{ opacity: 0 }}
     >
       <div className="max-w-4xl mx-5 lg:mx-auto pt-10">
         <h1 className="text-5xl font-extrabold pb-12">About Me.</h1>
@@ -65,7 +65,7 @@ function About() {
 
         <h2 className="text-2xl font-semibold pb-5">👨🏻‍💻 Work Experience</h2>
         <div className="grid grid-flow-row grid-rows-2">
-          <div className="row-span-1 px-5 pb-5 md:pb-10 border-l-[1px]">
+          <div className="row-span-1 px-5 pb-5 md:pb-10 border-l-[1px] ">
             <div className="absolute -translate-x-7 bg-white">○</div>
             <div className="flex justify-between font-medium">
               <p className="text-md md:text-lg">
@@ -101,7 +101,7 @@ function About() {
             </div>
           </div>
 
-          <div className="row-span-1 px-5 pb-5 md:pb-10 border-l-[1px]">
+          <div className="row-span-1 px-5 border-l-[1px] h-fit">
             <div className="absolute -translate-x-7 bg-white">○</div>
             <div className="flex justify-between font-medium">
               <p className="text-md md:text-lg">The British Council</p>
@@ -125,22 +125,29 @@ function About() {
                   Managed bi-weekly emails and calls to build rapport with
                   clients, boosting student re-registration rate by 24%
                 </li>
+                <li>
+                  Composed quarterly written reports of students’ performance
+                  and behavior both in and out of the classroom
+                </li>
               </ul>
             </div>
           </div>
         </div>
 
-        <div className="pt-12 flex space-x-3 cursor-pointer">
-          <p className="text-black text-md hover:underline">
-            More detailed information
-          </p>
+        {/* <h2 className="text-2xl font-semibold pb-5">🚀 Academic Projects</h2> */}
+
+        <div className=" flex space-x-3 cursor-pointer -translate-y-12">
+          <Link to="/resume">
+            <p className="text-black text-md hover:underline">
+              More detailed information
+            </p>
+          </Link>
           <div className="rotate-90 ">
             <ArrowUpIcon className="w-5 rotate-90 animate-bounce" />
           </div>
         </div>
-
-        <div className="md:max-w-4xl md:mx-5 lg:mx-auto z-0 pt-14 pb-20">
-            <Footer />
+        <div className="-translate-y-12">
+          <Footer />
         </div>
       </div>
     </m.div>
