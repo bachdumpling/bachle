@@ -1,4 +1,4 @@
-## https://main--bachle.netlify.app
+## bachle.netlify.app
 ## Welcome to my personal portfolio 😁
 
 ### You will need to install these to get started:
