@@ -78,18 +78,21 @@ function Project({ projects }) {
                     <p className="pt-5 text-md md:text-lg font-semibold">
                       About
                     </p>
+                    <p>Details coming soon...</p>
                   </div>
 
                   <div>
                     <p className="pt-5 text-md md:text-lg font-semibold">
                       Technologies
                     </p>
+                    <p>Details coming soon...</p>
                   </div>
 
                   <div>
                     <p className="pt-5 text-md md:text-lg font-semibold">
                       Website
                     </p>
+                    <p>Details coming soon...</p>
                   </div>
                 </div>
               </m.div>

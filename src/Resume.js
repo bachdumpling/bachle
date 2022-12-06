@@ -5,6 +5,8 @@ import resume from "./Assets/resume.pdf";
 import Footer from "./Footer";
 import "react-pdf/dist/esm/Page/TextLayer.css";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
+
 
 function Resume() {
   const [numPages, setNumPages] = useState(null);
