@@ -24,7 +24,7 @@ function ProjectCard({ project, setOpenProject }) {
 
           <div className="flex flex-row space-x-2 text-xs mx-10">
             {project?.technology.map((tech) => {
-              return <Technology tech={tech} />;
+              return <Technology tech={tech} key={tech} />;
             })}
           </div>
 

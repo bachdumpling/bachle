@@ -45,7 +45,7 @@ function App({ router }) {
       <Routes>
         <Route path="/" element={<Hero />} />
         <Route path="/about" element={<About />} />
-        {/* <Route path="/resume" element={<Resume />} /> */}
+        <Route path="/resume" element={<Resume />} />
         <Route path="/project" element={<Project projects={projects} />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>

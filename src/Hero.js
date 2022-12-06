@@ -31,17 +31,17 @@ function Hero() {
           </div>
         </div>
 
-        <div className="space-y-5 md:space-y-2">
+        <div className="space-y-2 md:space-y-2">
           <div className="md:pt-14 md:pb-5 pt-10">
             <MainIntro />
           </div>
-          <p className="text-gray-500 text-md md:text-lg py-5">
+          <p className="text-gray-500 text-sm md:text-lg py-5 text-justify md:text-left">
             I'm a developer 📱, digital creator 📷, & curious optimist 🦦. Right
             now, I'm probably exploring new hobbies, activities, and general
             knowledge; but I'm always ready to collaborate with creatives and
             businesses.
           </p>
-          <p className="text-gray-500 text-md md:text-lg leading-10 md:leading-normal">
+          <p className="text-gray-500 text-sm md:text-lg leading-10 md:leading-normal">
             View my
             <Link to="/about">
               <span className={`heroBtn`}>About</span>,
@@ -59,7 +59,7 @@ function Hero() {
         </div>
 
         <Link to="/about">
-          <div className="pt-10 flex space-x-3 cursor-pointer">
+          <div className="pt-5 md:pt-10 flex space-x-3 cursor-pointer">
             <p className="text-gray-500 text-md hover:underline">
               See more about me
             </p>
