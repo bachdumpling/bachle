@@ -27,8 +27,12 @@ function Resume() {
 
           <div className="py-5 text-gray-500">
             <span>
-              Reach out to me via my contact page. View or download the resume.
-            </span>
+              Reach out to me via my contact page. View or <a
+                  className="underline text-blue-500"
+                  href="https://drive.google.com/file/d/1vj2UttVoy-9x4DLWW_LzkufXN3aPsAA8/view?usp=sharing"
+                >
+                  download
+                </a> the resume.</span>
           </div>
 
           <div className="">
