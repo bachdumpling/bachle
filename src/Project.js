@@ -6,6 +6,7 @@ import Technology from "./Technology";
 import { ArrowLeftCircleIcon } from "@heroicons/react/24/outline";
 
 function Project({ projects }) {
+  // console.log(projects)
   const [openProject, setOpenProject] = useState(false);
   const [oneProject, setOneProject] = useState([]);
 
