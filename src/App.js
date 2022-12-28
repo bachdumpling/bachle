@@ -40,6 +40,13 @@ function App({ router }) {
   // }, []);
   // console.log(projectData);
 
+  console.log(`%c
+    / / / o.o
+    / / / >^<
+    /___/ /
+    Thank you for checking out my website. To explore more, visit this github repo: https://github.com/bachdumpling/bachle
+`, `font-family: monospace`);
+
   return (
     <div className="font-inter bg-[F2F2F2]">
       <Nav />
