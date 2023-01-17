@@ -36,7 +36,7 @@ function Contact() {
       transition={{ duration: 0.75 }}
       exit={{ opacity: 0 }}
     >
-      <div className="max-w-4xl mx-5 lg:mx-auto pt-10 mb-40">
+      <div className="max-w-4xl mx-5 lg:mx-auto pt-10">
         <h1 className="text-5xl font-extrabold">Contact.</h1>
 
         <div className="pt-5 pb-12 text-gray-500">

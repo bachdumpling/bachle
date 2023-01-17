@@ -10,8 +10,8 @@ function Technology({ tech }) {
 
 export function TechnologyModal({ tech }) {
   return (
-    <div className="border w-fit px-4 my-2 py-2 bg-[#efe9e4] rounded-md">
-      <p className="text-sm font-bold">{tech}</p>
+    <div className="border w-fit h-fit text-center px-4 my-2 py-2 bg-[#efe9e4] rounded-md">
+      <p className="md:text-sm text-xs font-bold">{tech}</p>
     </div>
   );
 }

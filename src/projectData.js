@@ -15,7 +15,10 @@ const projectData = [
     website: "",
     imageDescription: [moodr2, moodr3],
     longDescription: "",
-    github: [],
+    github: [
+      { client: "https://github.com/bachdumpling/moodr" },
+      { server: "https://github.com/bachdumpling/moodr-api" },
+    ],
     website: "",
   },
   {
@@ -26,7 +29,10 @@ const projectData = [
     technology: ["React", "JavaScript", "Cloud Firestore", "Tailwind CSS"],
     imageDescription: [moodr2, moodr3],
     longDescription: "",
-    github: [],
+    github: [
+      { client: "https://github.com/bachdumpling/moodr" },
+      { server: "https://github.com/bachdumpling/moodr-api" },
+    ],
     website: "",
   },
   {
@@ -39,7 +45,10 @@ const projectData = [
     technology: ["React", "JavaScript", "Ruby on Rails", "Tailwind CSS"],
     imageDescription: [moodr2, moodr3],
     longDescription: "",
-    github: [],
+    github: [
+      { client: "https://github.com/bachdumpling/moodr" },
+      { server: "https://github.com/bachdumpling/moodr-api" },
+    ],
     website: "",
   },
   {
@@ -51,7 +60,10 @@ const projectData = [
     technology: ["React", "JavaScript", "Ruby on Rails"],
     imageDescription: [moodr2, moodr3],
     longDescription: "",
-    github: [],
+    github: [
+      { client: "https://github.com/bachdumpling/moodr" },
+      { server: "https://github.com/bachdumpling/moodr-api" },
+    ],
     website: "",
   },
   {
@@ -63,7 +75,10 @@ const projectData = [
     longDescription:
       "Moodr is a smart wearable device that tracks your vital information and Moodr App is an accompanied app that combines your vital information from the watch with your answers to behavioral questions to generate your possible mood.",
     technology: ["Next.js", "Ruby on Rails", "Capacitor"],
-    github: [],
+    github: [
+      { client: "https://github.com/bachdumpling/moodr" },
+      { server: "https://github.com/bachdumpling/moodr-api" },
+    ],
     website: "",
   },
 ];

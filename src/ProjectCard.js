@@ -8,7 +8,7 @@ function ProjectCard({ project, setOpenProject }) {
       //   console.log(project)
       //   setOpenProject(true);
       // }}
-      className="col-span-1 row-span-1 flex cursor-pointer shadow-xl rounded-lg h-full w-full"
+      className="col-span-1 row-span-1 flex cursor-pointer shadow-lg rounded-lg h-full w-full"
     >
       <div className="relative overflow-hidden bg-no-repeat bg-cover w-full h-full">
         <img className="w-full h-full rounded-lg" src={project?.image} />
