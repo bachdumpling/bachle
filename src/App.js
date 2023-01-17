@@ -10,42 +10,22 @@ import Contact from "./Contact";
 import About from "./About";
 import Project from "./Project";
 import projectData from "./projectData";
+import ProjectDetail from "./ProjectDetail";
 
 function App({ router }) {
-  // const [users, setUsers] = useState([]);
-  // const [projects, setProjects] = useState([]);
-
-  // const usersCollectionRef = collection(db, "users");
-  // useEffect(() => {
-  //   const getUsers = async () => {
-  //     const data = await getDocs(usersCollectionRef);
-  //     setUsers(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-  //   };
-  //   getUsers();
-  // }, []);
-  // const projectCollectionRef = collection(db, "project");
-
-  // useEffect(() => {
-  //   const getProjects = async () => {
-  //     const data = await getDocs(projectCollectionRef);
-  //     // console.log(data)
-  //     setProjects(
-  //       data.docs.map((doc) => ({
-  //         ...doc.data(),
-  //         id: doc.id,
-  //       }))
-  //     );
-  //   };
-  //   getProjects();
-  // }, []);
-  // console.log(projectData);
-
-  console.log(`%c
+  console.log(
+    `%c
     / / / o.o
     / / / >^<
     /___/ /
     Thank you for checking out my website. To explore more, visit this github repo: https://github.com/bachdumpling/bachle
-`, `font-family: monospace`);
+`,
+    `font-family: monospace`
+  );
+  const [oneProjectDetail, setOneProjectDetail] = useState(null);
+  // projectData.map((project) => {
+  //   console.log(project.id);
+  // });
 
   return (
     <div className="font-inter bg-[F2F2F2]">
@@ -54,7 +34,20 @@ function App({ router }) {
         <Route path="/" element={<Hero />} />
         <Route path="/about" element={<About />} />
         <Route path="/resume" element={<Resume />} />
-        <Route path="/project" element={<Project projects={projectData} />} />
+        <Route
+          path="/project"
+          element={
+            <Project
+              projects={projectData}
+              setOneProjectDetail={setOneProjectDetail}
+              oneProjectDetail={oneProjectDetail}
+            />
+          }
+        />
+        <Route
+          path="/project/:id"
+          element={<ProjectDetail oneProjectDetail={oneProjectDetail} />}
+        />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </div>
