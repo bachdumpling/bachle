@@ -2,7 +2,7 @@ import React from "react";
 
 function Technology({ tech }) {
   return (
-    <div className="px-2 py-1 w-fit rounded-full bg-gray-400 bg-opacity-60 text-white shadow-md">
+    <div className="px-2 py-1 w-fit h-fit flex justify-center items-center rounded-full bg-white bg-opacity-20 text-white shadow-md">
       <p>{tech}</p>
     </div>
   );

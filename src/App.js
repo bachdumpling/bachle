@@ -22,10 +22,8 @@ function App({ router }) {
 `,
     `font-family: monospace`
   );
+
   const [oneProjectDetail, setOneProjectDetail] = useState(null);
-  // projectData.map((project) => {
-  //   console.log(project.id);
-  // });
 
   return (
     <div className="font-inter bg-[F2F2F2]">
@@ -38,7 +36,6 @@ function App({ router }) {
           path="/project"
           element={
             <Project
-              projects={projectData}
               setOneProjectDetail={setOneProjectDetail}
               oneProjectDetail={oneProjectDetail}
             />

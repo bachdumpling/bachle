@@ -8,29 +8,34 @@ import { GlobeAltIcon } from "@heroicons/react/24/solid";
 import ProjectDetail from "./ProjectDetail";
 import { Navigate, useNavigate } from "react-router-dom";
 import GitHub from "./icons/github.svg";
+import projectData from "./projectData";
 
-function Project({ projects, setOneProjectDetail, oneProjectDetail }) {
+function Project({ setOneProjectDetail, oneProjectDetail }) {
   const navigate = useNavigate();
   const [openProject, setOpenProject] = useState(false);
   const [oneProject, setOneProject] = useState([]);
-  console.log(oneProjectDetail);
 
-  const projectCards = projects.map((project) => {
-    return (
-      <div
-        onClick={(e) => {
-          setOneProject(project);
-          setOpenProject(!openProject);
-        }}
-      >
-        <ProjectCard
-          project={project}
-          key={project.id}
-          setOpenProject={setOpenProject}
-        />
-      </div>
-    );
-  });
+
+  const projectCards = projectData
+    .sort((a, b) => b.createdAt - a.createdAt)
+    .map((project) => {
+      return (
+        <div
+          onClick={(e) => {
+            setOneProject(project);
+            setOpenProject(!openProject);
+          }}
+        >
+          <ProjectCard
+            project={project}
+            key={project.id}
+            setOpenProject={setOpenProject}
+          />
+        </div>
+      );
+    });
+
+  // console.log(projectData);
 
   return (
     <m.div
@@ -56,10 +61,10 @@ function Project({ projects, setOneProjectDetail, oneProjectDetail }) {
                 initial={{ x: "100%" }}
                 animate={{ x: "0%" }}
                 transition={{ duration: 0.4 }}
-                className="absolute w-full h-full md:max-w-xl bg-[#FBFCF8] shadow-md inset-y-0 right-0"
+                className="absolute w-full h-full md:max-w-xl bg-[#FBFCF8] shadow-xl inset-y-0 right-0"
               >
                 {/* Modal content */}
-                <div class="py-6 px-6 relative h-full w-full">
+                <div className="py-6 px-6 relative h-full w-full">
                   <div
                     onClick={() => {
                       setOpenProject(false);
@@ -96,7 +101,7 @@ function Project({ projects, setOneProjectDetail, oneProjectDetail }) {
                         See more ...
                       </button>
                     </div>
-                    <p className="text-gray-500 text-justify text-xs md:text-md">
+                    <p className="text-black text-justify text-xs md:text-sm">
                       {oneProject.longDescription}
                     </p>
                   </div>
@@ -119,7 +124,20 @@ function Project({ projects, setOneProjectDetail, oneProjectDetail }) {
                       </a>
                       <p className="">Website</p>
                     </div>
-                    <p className="text-gray-500 text-justify text-xs md:text-md">Details coming soon...</p>
+                    {oneProject.website ? (
+                      <div className="flex flex-col font-semibold text-xs md:text-sm">
+                        <a
+                          className="hover:underline"
+                          href={oneProject?.website}
+                        >
+                          {oneProject?.website}
+                        </a>
+                      </div>
+                    ) : (
+                      <p className="text-gray-500 text-justify text-xs md:text-sm">
+                        Details coming soon...
+                      </p>
+                    )}
                   </div>
 
                   <div>
@@ -133,37 +151,26 @@ function Project({ projects, setOneProjectDetail, oneProjectDetail }) {
                       </a>
                       <p className="">GitHub</p>
                     </div>
-                    <div className="flex flex-col font-semibold text-xs md:text-md">
-                      <div className="flex">
-                        <p className="pr-2">Client:</p>
-                        {oneProject.github?.map((github) => {
-                          return (
-                            <a
-                              className="hover:underline"
-                              href={github?.client}
-                            >
-                              {github?.client}
-                            </a>
-                          );
-                        })}
-                      </div>
-                      <div className="flex">
-                        <p className="pr-2">Server:</p>
-                        {oneProject.github.map((github) => {
-                          return (
-                            <a
-                              className="hover:underline"
-                              href={github?.server}
-                            >
-                              {github?.server}
-                            </a>
-                          );
-                        })}
-                      </div>
+                    <div className="flex flex-col font-semibold text-xs md:text-sm">
+                      {oneProject.github?.map((github) => {
+                        return (
+                          <a className="hover:underline" href={github?.client}>
+                            {github?.client}
+                          </a>
+                        );
+                      })}
+
+                      {oneProject.github.map((github) => {
+                        return (
+                          <a className="hover:underline" href={github?.server}>
+                            {github?.server}
+                          </a>
+                        );
+                      })}
                     </div>
                   </div>
                 </div>
-                
+
                 {/* <div className="border w-full bg-black absolute">
                       <p>Open Project </p>
                 </div> */}
