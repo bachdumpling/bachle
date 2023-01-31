@@ -4,6 +4,7 @@ import moodr3 from "./Assets/moodr3.png";
 import spotify1 from "./Assets/spotify1.png";
 import boomergram1 from "./Assets/boomergram1.png";
 import boomergram2 from "./Assets/boomergram2.png";
+import bachle1 from "./Assets/bachle1.png";
 
 const projectData = [
   {
@@ -26,7 +27,7 @@ const projectData = [
   },
   {
     id: "2",
-    image: "https://i.ibb.co/MGkNfGh/Screen-Shot-2022-12-05-at-10-20-53-AM.png",
+    image: bachle1,
     name: "Bach Le",
     shortDescription: "My personal portfolio",
     technology: ["React", "JavaScript", "Cloud Firestore", "Tailwind CSS"],
