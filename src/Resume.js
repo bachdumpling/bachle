@@ -31,7 +31,8 @@ function Resume() {
             <span>
               Reach out to me via my contact page. View or <a
                   className="underline text-blue-500"
-                  href="https://drive.google.com/file/d/1vj2UttVoy-9x4DLWW_LzkufXN3aPsAA8/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1fIeQUcjpqLTvn1E99HCMOTD6pPSDDOuJ/view?usp=sharing"
+                  target="_blank"
                 >
                   download
                 </a> the resume.</span>

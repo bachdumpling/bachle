@@ -96,7 +96,7 @@ function Project({ setOneProjectDetail, oneProjectDetail }) {
                           setOneProjectDetail(oneProject);
                           navigate(`/project/${oneProject.id}`);
                         }}
-                        className="text-sm text-gray-500"
+                        className="text-sm text-gray-500 hidden"
                       >
                         See more ...
                       </button>
@@ -129,6 +129,7 @@ function Project({ setOneProjectDetail, oneProjectDetail }) {
                         <a
                           className="hover:underline"
                           href={oneProject?.website}
+                          target="_blank"
                         >
                           {oneProject?.website}
                         </a>

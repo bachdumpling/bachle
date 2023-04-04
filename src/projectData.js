@@ -32,7 +32,7 @@ const projectData = [
     shortDescription: "My personal portfolio",
     technology: ["React", "JavaScript", "Cloud Firestore", "Tailwind CSS"],
     imageDescription: [moodr2, moodr3],
-    longDescription: "",
+    longDescription: "Welcome to my portfolio. You are here!",
     github: [
       { client: "https://github.com/bachdumpling/bachle" },
       { server: "" },
@@ -48,7 +48,7 @@ const projectData = [
       "Engineered and tested a prospective feature for Spotify called 'Spotify Shop'",
     technology: ["Next.js", "JavaScript", "Ruby on Rails", "Tailwind CSS"],
     imageDescription: [spotify1],
-    longDescription: "",
+    longDescription: "The Spotify Shop was created as the final project for the E-Commerce course at Fordham University. It is an e-commerce platform that improves the existing marketplace by allowing Spotify users to buy products from their favorite artists directly on Spotify without visiting a third-party website.",
     github: [
       { client: "https://github.com/bachdumpling/spotify-shop-survey" },
       { server: "" },
@@ -86,7 +86,7 @@ const projectData = [
       { client: "https://github.com/bachdumpling/moodr" },
       { server: "https://github.com/bachdumpling/moodr-api" },
     ],
-    website: "",
+    website: "https://moodr.vercel.app",
     createdAt: new Date("2023, January, 15"),
   },
 ];
