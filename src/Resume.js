@@ -31,7 +31,7 @@ function Resume() {
             <span>
               Reach out to me via my contact page. View or <a
                   className="underline text-blue-500"
-                  href="https://drive.google.com/file/d/1fIeQUcjpqLTvn1E99HCMOTD6pPSDDOuJ/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1d3D1_NIfJAV7CAZ6BvWthTl4L_-89a5g/view?usp=sharing"
                   target="_blank"
                 >
                   download
