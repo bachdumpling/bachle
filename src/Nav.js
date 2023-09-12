@@ -29,7 +29,7 @@ function Nav() {
 
       {/* Right */}
       {/* <div className="hidden md:visible"> */}
-      <div className="grid-flow-col grid-rows-1 grid-cols-5 w-96 justify-items-center text-gray-500 text-lg invisible md:visible inline-grid gap-x-10">
+      <div className="grid-flow-col grid-rows-1 grid-cols-3 w-96 justify-items-center text-gray-500 text-lg invisible md:visible inline-grid gap-x-10">
         <div className="col-span-1">
           {params === "/about" ? (
             <>
@@ -44,7 +44,7 @@ function Nav() {
           )}
         </div>
 
-        <div className="col-span-1">
+        {/* <div className="col-span-1">
           {params === "/resume" ? (
             <Link to="/resume">
               <p className="navBtn font-semibold text-black">Resume</p>
@@ -54,7 +54,7 @@ function Nav() {
               <p className="navBtn">Resume</p>
             </Link>
           )}
-        </div>
+        </div> */}
 
         <div className="col-span-1">
           {params === "/project" ? (
@@ -80,9 +80,9 @@ function Nav() {
           )}
         </div>
 
-        <div className="navBtn col-span-1">
+        {/* <div className="navBtn col-span-1"> */}
           {/* <img className="w-6 h-6" src={DarkMode} /> */}
-          {darkMode ? (
+          {/* {darkMode ? (
             <MoonIcon
               onClick={() => {
                 setDarkMode(false);
@@ -96,8 +96,8 @@ function Nav() {
               }}
               className="w-6 h-6"
             />
-          )}
-        </div>
+          )} */}
+        {/* </div> */}
       </div>
       {/* </div> */}
 
@@ -187,7 +187,7 @@ function Nav() {
                   ) : null}
                 </div>
 
-                <div className="flex flex-col justify-center items-center">
+                {/* <div className="flex flex-col justify-center items-center">
                   <Link to="/resume">
                     <p
                       onClick={() => {
@@ -202,7 +202,7 @@ function Nav() {
                       <div className="mt-1 w-20 h-[1px] bg-gray-800 rounded-md "></div>
                     </div>
                   ) : null}
-                </div>
+                </div> */}
 
                 <div className="flex flex-col justify-center items-center">
                   <Link to="/project">

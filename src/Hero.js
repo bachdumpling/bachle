@@ -7,12 +7,19 @@ import { shuffle } from "lodash";
 import { Echo } from "echo3d";
 import MainIntro from "./MainIntro";
 import Footer from "./Footer";
+import projectData from "./projectData";
+import Technology from "./Technology";
+import ProjectCard from "./ProjectCard";
 
 function Hero() {
   function copyText() {
     /* Copy text into clipboard */
     navigator.clipboard.writeText("lehoangbach7802@gmail.com");
   }
+
+  const [project1, project2] = projectData
+    .sort((a, b) => b.createdAt - a.createdAt)
+    .slice(0, 2);
 
   return (
     <m.div
@@ -31,7 +38,7 @@ function Hero() {
           </div>
         </div>
 
-        <div className="space-y-2 md:space-y-2">
+        <div className="space-y-2 md:space-y-2 mb-10">
           <div className="md:pt-14 md:pb-5 pt-10">
             <MainIntro />
           </div>
@@ -46,9 +53,9 @@ function Hero() {
             <Link to="/about">
               <span className={`heroBtn`}>About</span>,
             </Link>{" "}
-            <Link to="/resume">
+            {/* <Link to="/resume">
               <span className={`heroBtn`}>Resume</span>,
-            </Link>{" "}
+            </Link>{" "} */}
             <Link to="/project">
               <span className={`heroBtn`}>Projects</span>, or
             </Link>{" "}
@@ -58,10 +65,20 @@ function Hero() {
           </p>
         </div>
 
-        <Link to="/about">
-          <div className="pt-5 md:pt-10 flex space-x-3 cursor-pointer">
+        <h2 className="text-2xl font-semibold pb-5 mb-5">Recent Projects</h2>
+
+        <div className="grid lg:grid-cols-2 grid-cols-1 gap-5 py-2">
+          {[project1, project2].map((project) => (
+            <Link to={`/project`}>
+              <ProjectCard project={project} />
+            </Link>
+          ))}
+        </div>
+
+        <Link to="/project">
+          <div className="pt-5 md:pt-5 flex space-x-3 cursor-pointer">
             <p className="text-gray-500 text-md hover:underline">
-              See more about me
+              See more projects
             </p>
             <div className="rotate-90 ">
               <ArrowUpIcon className="w-5 rotate-90 animate-bounce" />

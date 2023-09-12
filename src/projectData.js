@@ -5,6 +5,7 @@ import spotify1 from "./Assets/spotify1.png";
 import boomergram1 from "./Assets/boomergram1.png";
 import boomergram2 from "./Assets/boomergram2.png";
 import bachle1 from "./Assets/bachle1.png";
+import zdefine1 from "./Assets/zdefine1.png";
 
 const projectData = [
   {
@@ -48,7 +49,8 @@ const projectData = [
       "Engineered and tested a prospective feature for Spotify called 'Spotify Shop'",
     technology: ["Next.js", "JavaScript", "Ruby on Rails", "Tailwind CSS"],
     imageDescription: [spotify1],
-    longDescription: "The Spotify Shop was created as the final project for the E-Commerce course at Fordham University. It is an e-commerce platform that improves the existing marketplace by allowing Spotify users to buy products from their favorite artists directly on Spotify without visiting a third-party website.",
+    longDescription:
+      "The Spotify Shop was created as the final project for the E-Commerce course at Fordham University. It is an e-commerce platform that improves the existing marketplace by allowing Spotify users to buy products from their favorite artists directly on Spotify without visiting a third-party website.",
     github: [
       { client: "https://github.com/bachdumpling/spotify-shop-survey" },
       { server: "" },
@@ -88,6 +90,23 @@ const projectData = [
     ],
     website: "https://moodr.vercel.app",
     createdAt: new Date("2023, January, 15"),
+  },
+  {
+    id: "6",
+    image: zdefine1,
+    imageDescription: [zdefine1],
+    name: "Z-define",
+    shortDescription:
+      "Online dictionary for Gen Z slang, featuring definitions, & popular terms",
+    longDescription: `For this project, I got the opportunity to work as part of a team of exceptional peers to complete the semester-long project for the "Web Application and Development" class at Fordham University during the 2022/2024 Spring semester...`,
+    technology: ["React", "Python", "Figma"],
+    github: [
+      { client: "https://github.com/bachdumpling/genz-dictionary" },
+      // { server: "https://github.com/bachdumpling/genz-dictionary" },
+    ],
+    website: "https://zdefine.vercel.app/",
+    designDiary: "https://chanbinmoon.squarespace.com/z-define",
+    createdAt: new Date("2023, May, 20"),
   },
 ];
 

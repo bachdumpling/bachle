@@ -21,50 +21,128 @@ function About() {
           <div className="row-span-1 px-5 pb-5 md:pb-10 border-l-[1px]">
             <div className="absolute -translate-x-7 bg-white">○</div>
             <div className="flex justify-between font-medium">
-              <p className="text-md md:text-lg"> Fordham University</p>
+              <p className="text-md md:text-lg">Fordham University</p>
               <p className="text-lg invisible md:visible">Expected May 2024</p>
             </div>
             <div className="text-sm md:text-md leading-6 md:leading-8 text-justify text-gray-600">
-              <span>
-                I am a junior majoring in Global Business Technology with a
-                minor in Computer Science at the Gabelli School of Business,
-                Fordham University. As an aspiring product manager, an excellent
-                product is not judged solely on its looks, but on its
-                functionality and usability as well. My experience as a
-                programmer combined with a business mindset allows me to come up
-                with intelligent solutions to technical and non-technical
-                challenges, while at the same time designing sleek and visually
-                appealing products.
-              </span>
+              Pursuing a Bachelor of Science in Information Systems.
+              <br></br>
+              Relevant coursework includes System Analysis, Mobile and Web App
+              Design & Development, Database System, and Web Analytics.
             </div>
           </div>
 
-          <div className="row-span-1 px-5 mb-10 md:mb-10 border-l-[1px]">
+          <div className="row-span-1 px-5 border-l-[1px]">
             <div className="absolute -translate-x-7 bg-white">○</div>
             <div className="flex justify-between font-medium">
-              <p className="text-md md:text-lg"> Flatiron School</p>
+              <p className="text-md md:text-lg">Flatiron School</p>
               <p className="text-lg invisible md:visible">
                 Graduated August 2022
               </p>
             </div>
             <div className="text-sm md:text-md leading-6 md:leading-8 text-justify text-gray-600">
-              <span>
-                I have recently graduated from Flatiron School's Software
-                Engineering Bootcamp where I learned crucial technical skills to
-                work as a developer. I am experienced using frontend and backend
-                technologies such as Ruby, Rails, Node, JavaScript, and React.
-                With a global business background, I possess strong skills in
-                collaboration, problem-solving, and communication. I am
-                passionate about learning new things and staying current with
-                technology and bringing innovative ideas to accomplish robust
-                projects.
-              </span>
+              Graduated from the Computer Science and Full Stack Software
+              Engineering program.
+              <br></br>
+              Best in class final project: Boomergram
             </div>
           </div>
         </div>
 
         <h2 className="text-2xl font-semibold pb-5">👨🏻‍💻 Work Experience</h2>
         <div className="grid grid-flow-row grid-rows-2">
+          {/* Plante Experience */}
+          <div className="row-span-1 px-5 pb-5 md:pb-10 border-l-[1px] ">
+            <div className="absolute -translate-x-7 bg-white">○</div>
+            <div className="flex justify-between font-medium">
+              <p className="text-md md:text-lg">Plante</p>
+              <p className="text-lg invisible md:visible">
+                Melbourne, Australia
+              </p>
+            </div>
+            <div className="text-sm md:text-md leading-6 md:leading-8 text-justify text-gray-600 list-disc">
+              <div className="flex justify-between font-medium">
+                <p>Software Engineer (Remote, Part-time)</p>
+                <p>February 2023 – Present</p>
+              </div>
+              <ul className="list-disc">
+                <li>
+                  Develop and maintain a full-stack e-commerce site with
+                  Next.js, Node.js, and PostgreSQL.
+                </li>
+                <li>
+                  Leverage real-time databases to optimize stock management,
+                  order processing, and customer service.
+                </li>
+                <li>
+                  Reduce page load time by 40% by implementing caching, load
+                  balancing, and server-side rendering.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* The Markup Experience */}
+          <div className="row-span-1 px-5 pb-5 md:pb-10 border-l-[1px] ">
+            <div className="absolute -translate-x-7 bg-white">○</div>
+            <div className="flex justify-between font-medium">
+              <p className="text-md md:text-lg">The Markup</p>
+              <p className="text-lg invisible md:visible">New York, NY</p>
+            </div>
+            <div className="text-sm md:text-md leading-6 md:leading-8 text-justify text-gray-600 list-disc">
+              <div className="flex justify-between font-medium">
+                <p>Software Engineer Intern</p>
+                <p>June 2023 – August 2023</p>
+              </div>
+              <ul className="list-disc">
+                <li>
+                  Revamped Blacklight - a real-time website privacy inspector,
+                  improving performance with full-stack optimizations.
+                </li>
+                <li>
+                  Introduced two new features: targeted URL scans and API keys
+                  system for access control.
+                </li>
+                <li>
+                  Authored the Blacklight RESTfull API documentation, boosting
+                  20% API usage and 1000+ monthly user engagements.
+                </li>
+                <li>
+                  Improved Blacklight's performance by 25% by optimizing its
+                  backend using Node.js and AWS Lambda/S3.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Ra Labs Experience */}
+          <div className="row-span-1 px-5 pb-5 md:pb-10 border-l-[1px] ">
+            <div className="absolute -translate-x-7 bg-white">○</div>
+            <div className="flex justify-between font-medium">
+              <p className="text-md md:text-lg">Ra Labs</p>
+              <p className="text-lg invisible md:visible">New York, NY</p>
+            </div>
+            <div className="text-sm md:text-md leading-6 md:leading-8 text-justify text-gray-600 list-disc">
+              <div className="flex justify-between font-medium">
+                <p>Full-stack Software Engineer Intern</p>
+                <p>February 2023 – May 2023</p>
+              </div>
+              <ul className="list-disc">
+                <li>
+                  Launched the MVP of Amenti, a cryptocurrency trading platform
+                  with robust backend support.
+                </li>
+                <li>
+                  Designed and implemented RESTful APIs using Ruby on Rails and
+                  PostgreSQL.
+                </li>
+                <li>
+                  Developed intuitive user interfaces using React.js and
+                  collaborated in Agile development.
+                </li>
+              </ul>
+            </div>
+          </div>
           <div className="row-span-1 px-5 pb-5 md:pb-10 border-l-[1px] ">
             <div className="absolute -translate-x-7 bg-white">○</div>
             <div className="flex justify-between font-medium">
@@ -136,7 +214,7 @@ function About() {
 
         {/* <h2 className="text-2xl font-semibold pb-5">🚀 Academic Projects</h2> */}
 
-        <div className=" flex space-x-3 cursor-pointer -translate-y-12">
+        {/* <div className=" flex space-x-3 cursor-pointer -translate-y-12">
           <Link to="/resume">
             <p className="text-black text-md hover:underline">
               More detailed information
@@ -145,8 +223,8 @@ function About() {
           <div className="rotate-90 ">
             <ArrowUpIcon className="w-5 rotate-90 animate-bounce" />
           </div>
-        </div>
-        <div className="-translate-y-12">
+        </div> */}
+        <div className="-translate-y-0">
           <Footer />
         </div>
       </div>
