@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import { db } from "./firebase-config.js";
-import { collection, getDocs } from "firebase/firestore";
 import Hero from "./Hero";
 import Nav from "./Nav";
 import Resume from "./Resume";
